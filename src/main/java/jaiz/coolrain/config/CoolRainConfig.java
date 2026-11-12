@@ -26,44 +26,6 @@ public class CoolRainConfig extends MidnightConfig {
         family.waxed().forEach(blocks::add);
     }
 
-    private static List<Identifier> createFabricBlocks() {
-        List<Block> blocks = new ArrayList<>(Blocks.WOOL.asList());
-        
-        // Wool Stairs
-        blocks.addAll(Blocks.WOOL_STAIRS.asList());
-    
-        // Wool Slabs
-        blocks.addAll(Blocks.WOOL_SLAB.asList());
-    
-        // Carpets
-        blocks.addAll(Blocks.CARPET.asList());
-    
-        // Beds
-        blocks.addAll(Blocks.BED.asList());
-        
-        return toIdHelper(blocks);
-    }
-
-    private static List<Identifier> createGlassBlocks() {
-        List<Block> blocks = new ArrayList<>();
-    
-        // Stained Glass (16 colors)
-        blocks.addAll(Blocks.STAINED_GLASS.asList());
-    
-        blocks.addAll(List.of(
-            Blocks.GLASS,
-            Blocks.TINTED_GLASS,
-            Blocks.ICE,
-            Blocks.BLUE_ICE,
-            Blocks.PACKED_ICE,
-            Blocks.REDSTONE_LAMP,
-            Blocks.DAYLIGHT_DETECTOR,
-            Blocks.BEACON
-        ));
-    
-        return toIdHelper(blocks);
-    }
-
     @Entry(category = GENERAL, name="Thunderstorm Winds")
     public static boolean thunderstormWinds = true;
 
