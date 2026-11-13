@@ -54,8 +54,10 @@ public final class FabricRainSoundInstance extends AbstractTickableSoundInstance
         if (distanceDelay) {
             Vec3 camera = minecraft.gameRenderer.mainCamera().position();
             double distance = Math.sqrt(camera.distanceToSqr(x, y, z));
-            int delay = (int) Math.round(distance / 40.0 * 20.0);
-            if (delay > 0) {
+            // Match vanilla's distance-delay behavior: only delay impacts
+            // farther than 10 blocks, using an approximate speed of 40 m/s.
+            if (distance > 10.0) {
+                int delay = (int) Math.round(distance / 40.0 * 20.0);
                 minecraft.getSoundManager().playDelayed(sound, delay);
                 return;
             }
