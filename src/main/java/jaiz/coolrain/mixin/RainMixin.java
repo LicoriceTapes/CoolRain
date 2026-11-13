@@ -85,41 +85,41 @@ public abstract class RainMixin {
         try {
             if (isAbove) {
                 if (CoolRainConfig.METAL_BLOCKS.contains(blockId) && CoolRainConfig.metalSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, SoundSource.WEATHER, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FABRIC_BLOCKS.contains(blockId) && CoolRainConfig.fabricSounds) {
                     jaiz.coolrain.FabricRainSoundInstance.play(world, x, y, z, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.GLASS_BLOCKS.contains(blockId) && CoolRainConfig.glassSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, SoundSource.WEATHER, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else {
-                    world.playLocalSound(x, y, z, SoundEvents.WEATHER_RAIN_ABOVE, SoundSource.WEATHER, CoolRainConfig.vanillaRainVolume / 2, 0.75F, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, SoundEvents.WEATHER_RAIN_ABOVE, CoolRainConfig.vanillaRainVolume / 2, 0.75F, false);
                 }
             } else {
                 if (CoolRainConfig.METAL_BLOCKS.contains(blockId) && CoolRainConfig.metalSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, SoundSource.WEATHER, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FABRIC_BLOCKS.contains(blockId) && CoolRainConfig.fabricSounds) {
                     jaiz.coolrain.FabricRainSoundInstance.play(world, x, y, z, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.GLASS_BLOCKS.contains(blockId) && CoolRainConfig.glassSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, SoundSource.WEATHER, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FOLIAGE_BLOCKS.contains(blockId) && CoolRainConfig.foliageSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_FOLIAGE, SoundSource.WEATHER, CoolRainConfig.foliageBlocksVolume, 1.0f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_FOLIAGE, CoolRainConfig.foliageBlocksVolume, 1.0f, true);
                 } else if (CoolRainConfig.WATER_BLOCKS.contains(blockId) && CoolRainConfig.waterSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_WATER, SoundSource.WEATHER, CoolRainConfig.waterBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_WATER, CoolRainConfig.waterBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.CRYSTAL_BLOCKS.contains(blockId) && CoolRainConfig.crystalSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, SoundSource.WEATHER, CoolRainConfig.glassBlocksVolume, 1.0F, false);
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_AMETHYST, SoundSource.WEATHER, CoolRainConfig.crystalBlocksVolume, world.getRandom().nextIntBetweenInclusive(6, 10) * 0.1f, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, CoolRainConfig.glassBlocksVolume, 1.0F, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_AMETHYST, CoolRainConfig.crystalBlocksVolume, world.getRandom().nextIntBetweenInclusive(6, 10) * 0.1f, false);
                 } else if (CoolRainConfig.MUSICAL_BLOCKS.contains(blockId) && CoolRainConfig.musicalSounds) {
-                    world.playLocalSound(x, y, z, SoundEvents.WEATHER_RAIN, SoundSource.WEATHER, CoolRainConfig.vanillaRainVolume, 1.0F, false);
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_NOTEBLOCK, SoundSource.WEATHER, CoolRainConfig.musicalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, SoundEvents.WEATHER_RAIN, CoolRainConfig.vanillaRainVolume, 1.0F, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_NOTEBLOCK, CoolRainConfig.musicalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, false);
                 } else if (CoolRainConfig.BELL_BLOCKS.contains(blockId) && CoolRainConfig.bellSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, SoundSource.WEATHER, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                     if (world.getRandom().nextInt(5) == 0) {
                         world.playLocalSound(x, y, z, SoundEvents.BELL_BLOCK, SoundSource.WEATHER, CoolRainConfig.bellBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, false);
                     }
                 } else if (CoolRainConfig.EVAPORATIVE_BLOCKS.contains(blockId) && CoolRainConfig.evaporativeSounds) {
-                    world.playLocalSound(x, y, z, CoolRainSounds.RAIN_SOUNDS_LAVA, SoundSource.WEATHER, CoolRainConfig.evaporativeBlocksVolume, 1.0F, true);
-                    world.playLocalSound(x, y, z, SoundEvents.WEATHER_RAIN, SoundSource.WEATHER, CoolRainConfig.vanillaRainVolume, 1.0F, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_LAVA, CoolRainConfig.evaporativeBlocksVolume, 1.0F, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, SoundEvents.WEATHER_RAIN, CoolRainConfig.vanillaRainVolume, 1.0F, false);
                 } else {
-                    world.playLocalSound(x, y, z, SoundEvents.WEATHER_RAIN, SoundSource.WEATHER, CoolRainConfig.vanillaRainVolume, 1.0F, false);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, SoundEvents.WEATHER_RAIN, CoolRainConfig.vanillaRainVolume, 1.0F, false);
                 }
             }
         } finally {
