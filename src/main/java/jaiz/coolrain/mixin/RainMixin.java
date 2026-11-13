@@ -87,7 +87,7 @@ public abstract class RainMixin {
                 if (CoolRainConfig.METAL_BLOCKS.contains(blockId) && CoolRainConfig.metalSounds) {
                     jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FABRIC_BLOCKS.contains(blockId) && CoolRainConfig.fabricSounds) {
-                    jaiz.coolrain.FabricRainSoundInstance.play(world, x, y, z, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_FABRIC, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.GLASS_BLOCKS.contains(blockId) && CoolRainConfig.glassSounds) {
                     jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else {
@@ -97,7 +97,7 @@ public abstract class RainMixin {
                 if (CoolRainConfig.METAL_BLOCKS.contains(blockId) && CoolRainConfig.metalSounds) {
                     jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_METAL, CoolRainConfig.metalBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FABRIC_BLOCKS.contains(blockId) && CoolRainConfig.fabricSounds) {
-                    jaiz.coolrain.FabricRainSoundInstance.play(world, x, y, z, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
+                    jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_FABRIC, CoolRainConfig.fabricBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.GLASS_BLOCKS.contains(blockId) && CoolRainConfig.glassSounds) {
                     jaiz.coolrain.RainSoundInstance.play(world, x, y, z, CoolRainSounds.RAIN_SOUNDS_GLASS, CoolRainConfig.glassBlocksVolume, world.getRandom().nextIntBetweenInclusive(8, 12) * 0.1f, true);
                 } else if (CoolRainConfig.FOLIAGE_BLOCKS.contains(blockId) && CoolRainConfig.foliageSounds) {
